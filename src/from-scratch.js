@@ -13,8 +13,22 @@
 // Question 1: petJudger
 // ============================================
 
+
 const petJudger = (petBreed, petName) => {
-  // Your code here
+  if (petBreed === 'dog' && petName === 'Bob') {
+    console.log(`I love dogs! Bob is so cute!`)
+  } else if (petBreed === 'cat' && petName === 'Ginger') {
+    console.log(`I love cats Ginger is so cute!`)
+  } else if (petBreed === 'turtle' && petName === 'Carl') {
+    console.log(`Who doesn't love a good turtle? Carl is the tops.`)
+  } else if (petBreed === 'snake' && petName === 'Zuko') {
+    console.log(`Not a fan, please take Zuko and leave.`)
+  } else if (petBreed === undefined) {
+    console.log(`Missing information. Please provide a valid pet.`)
+  } else {
+    console.log(`What an...interesting pet.`)
+  }
+
 };
 
 // ============================================
