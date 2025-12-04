@@ -308,6 +308,28 @@ sum(5); // 5
 sum(100, 200, 800, 1, 1, 1); // 1103;
 ```
 
+Purpose of Rest Parameters: Rest parameters allow a function to accept an indefinite number of arguments as an array. This is useful when you don't know ahead of time how many arguments will be passed to your function.
+
+How to Use Them: To turn a parameter into a rest parameter, use the ... operator before the parameter name (e.g. ...numbers). All remaining arguments passed to the function are collected into an array.
+
+Example Implementation:
+
+```js
+const sum = (...numbers) => {
+  let total = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    total += numbers[i];
+  }
+  return total;
+}
+
+sum(1, 2, 10); // 13
+sum(5); // 5
+sum(100, 200, 800, 1, 1, 1); // 1103
+```
+
+In this example, ...numbers collects all arguments into an array called numbers. We can then iterate through this array and add up all the values, regardless of how many were passed in.
+
 ### Question 5
 
 Imagine you are teaching a brand new programmer a brief lesson about **scope**. Your lesson should have the following components:
